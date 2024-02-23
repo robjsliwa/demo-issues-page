@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
 import Root from "./root.component";
 
+export { Issues } from "./components/issues";
+
 const lifecycles = singleSpaReact({
   React,
   ReactDOM,

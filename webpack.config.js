@@ -18,6 +18,5 @@ module.exports = (webpackConfigEnv, argv) => {
         },
       ],
     },
-    externals: ["@myorg/dashboard-layout"],
   });
 };
