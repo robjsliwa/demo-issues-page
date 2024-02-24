@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AllIssues, OpenIssues, ClosedIssues } from "./index";
 // @ts-ignore
 import { useDashboard } from "@myorg/dashboard-layout";
@@ -34,6 +34,7 @@ export function Issues(props) {
           <Route path="/issues" element={<AllIssues />} />
           <Route path="/issues/open" element={<OpenIssues />} />
           <Route path="/issues/closed" element={<ClosedIssues />} />
+          <Route path="/issues/*" element={<Navigate to="/issues" replace />} />
         </Routes>
       </BrowserRouter>
     </section>
